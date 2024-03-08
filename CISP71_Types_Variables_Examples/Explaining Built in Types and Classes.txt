@@ -1,0 +1,61 @@
+Classes
+
+We are not going to discuss creating user defined classes now.
+We are going to use built in classes
+Check the following link for python documentation:
+https://docs.python.org/2/library/stdtypes.html#
+Python is an object oriented programming language. Almost everything in Python is an object, with its properties and methods. A Class is like an object constructor, or a "blueprint" for creating objects.
+Classes are used to create objects. Classes define a type.
+A class includes properties and behavior. You can consider it a user defined type that includes both properties, attributes that describe it and methods that specifies behavior.
+What is a method in python?
+
+In Python, a method is a function that is available for a given object because of the object's type. For example, if you create my_list = [1, 2, 3] , the append method can be applied to my_list because it's a Python list: my_list. append(4) . All lists have an append method simply because they are lists. list objects have methods called append, insert, remove, sort, and so on.
+A method in python is somewhat similar to a function, except it is associated with object/classes. Methods in python are very similar to functions except for two major differences. The method is implicitly used for an object for which it is called. The method is accessible to data that is contained within the class.
+Example 1:
+Student Class.
+Properties or attributes of a student, that describes the student are (Name, StudentID, Gender, Age, etc.).
+Behaviors or methods of the class student (enroll(), drop(), study(), etc.)
+Note: When we talk about properties we do not use paranthesis. But when we talk about methods we use () paranethesis.
+So when we create an object student1 of Student. We say instantiate a Student. student1= Student(). Student() is a constructor. It is a method with the same name as the class. We can have a constructor with no parameters or with parameters.
+For example student1=Student(). We are creating an object student1 of class Student using the constructor with no arguments.
+student2=Student('Sam'). We are creating an object student 2 of class Student using the constructor with an argument name.
+So student2 is a Student with name Sam.
+When you want to get a property of student2 you use a dot after the object name and specify the propery.
+student2.name
+when you want to call a method or behavior of student2 you use dot and the method name then parenthesis
+student2.study().
+The behavior or the method might take an argument to change how the method will be implemented.
+example
+student2.enroll('CISD41')
+Example 2:
+Door Class:
+Poperties (height, color, is_locked)
+Behaviors (open(), close(), toggle_lock())
+We created a Door Class- A type with properties and Behavior.
+Let us create a unique object door1 of type Door
+with height : 85, color:red, is_locked: flase
+it has methods open(), close(), toggle_lock()
+We say we instantiated a Door class.
+Let us instantiate another Door object name it door2
+with height: 95, color: gray, is_locked: true.
+It has methods or behavior open(), close(), toggle_lock()
+Let us say I want to change the door2 color
+door2.color='green'
+let us say I want to print the door2 color
+print (door2.color)
+as you see when I want to retrieve the ojbect properties I do not use paranthesis.
+If I want to close or perform the close behavior of door2
+door2.close().
+I used parenthesis.
+Built-In Types Classes in Python
+
+Built-in Classes
+
+Examples: List, Set, Disctionaries, Tuple.
+Those are built in types or classes in Python.
+https://www.tutorialspoint.com/built-in-list-functions-and-methods-in-python
+https://www.tutorialspoint.com/built-in-dictionary-functions-and-methods-in-python
+https://www.tutorialspoint.com/built-in-tuple-functions-in-python
+Later you will see that we use more in Numpy, etc.
+Built-in class - type- list
+https://www.tutorialspoint.com/built-in-list-functions-and-methods-in-python
