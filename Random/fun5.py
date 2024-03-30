@@ -103,3 +103,115 @@ def grades(grades_exam):
 
 # Call the function
 grades(98) """
+
+""" # Example 1: Printing a formatted string
+name = "Alice"
+age = 25
+print("%s is %d years old." % (name, age))
+# Output: Alice is 25 years old.
+
+# Example 2: Printing a formatted string with a floating-point value
+price = 19.99
+print("The price is $%.2f." % price)
+# Output: The price is $19.99. """
+
+""" name="Sam"
+age=23
+enrollmenatFees=70
+
+print("%s is %d years old. Enrollment fees $%.2f"%(name,age,enrollmenatFees))
+
+print("{} is {} years old. Enrollment fees ${:.2f}".format(name,age,enrollmenatFees)) """
+
+""" # Example 1: Printing a formatted string using 'str.format()'
+name = "Bob"
+age = 30
+print("{} is {} years old.".format(name, age))
+# Output: Bob is 30 years old.
+
+# Example 2: Printing a formatted string with named arguments
+product = "Python Course"
+price = 99.99
+print("{name} costs ${price:.2f}.".format(name=product, price=price))
+# Output: Python Course costs $99.99. """
+
+""" name="Jack"
+age=18
+fees=29.95
+
+print(f'{name} is {age} years old. The fees for the club is ${fees:.2f}') """
+
+""" basicPay=6000
+sales=400
+COMMISSION=.10
+
+def grossPay(basicPay,sales):
+    return basicPay * sales * COMMISSION
+
+print("Your basic pay: ", basicPay)
+print("Your sales: ", sales)
+print("Your dross pay: ", grossPay(basicPay,sales)) """
+
+""" def studentInfo(name,age,major,city):
+    print("Student info: name: %s age: %d major: %s city: %s"%(name,age,major,city))
+
+studentInfo("Sam",23,"Networking","Walnut") """
+
+""" def studentInfo(name,age,major,city="Walnut"):
+    print("Student info: name: %s age: %d major: %s city: %s"%(name,age,major,city))
+
+studentInfo("Sam",23,"Networking") """
+
+""" #Get the area of a circle
+#radius
+#create a function that will take the circle_diamater and return the area
+#note PI is constant
+#recall radius = diameter/2.0
+
+def calc_circle_area(circle_diamater):
+    #define a constant for pi_val
+    pi_val = 3.14159265
+    #declare the radius
+    radius = circle_diamater/2.0
+    #calculate the area
+    circle_area = pi_val * (radius *radius)
+    return circle_area
+
+#Calories per sq in 16.7
+#create a function to calculate the calories in pizza diameter
+#total calories = area * cpi
+
+def pizza_calories(pizza_diameter):
+    #declare a constant for calories per sq in
+    calories_per_square_inch = 16.7
+    #total_calories = area * calories per sq in
+    # call the function that will get the area
+    total_calories = calc_circle_area(pizza_diameter) * calories_per_square_inch
+    return total_calories
+
+print(pizza_calories(12)) """
+
+""" centimeters_per_inch = 2.54
+inches_per_foot = 12
+
+def height_US_to_centimeters(feet, inches):
+    Converts a height in feet/inches to centimeters.
+    total_inches = (feet * inches_per_foot) + inches  # Total inches
+    centimeters = total_inches * centimeters_per_inch
+    return centimeters
+
+feet = int(input('Enter feet: '))
+inches = int(input('Enter inches: '))
+
+print('Centimeters:', height_US_to_centimeters(feet, inches)) """
+
+""" def ebay_sale(price):
+    if price > 50 and price <=1000:
+        totalPrice= .50 + price + price * .05
+    elif price <=50:
+        totalPrice= .50 + price + price * .13
+    else:
+        totalPrice = .50 + price + price * .02
+    return totalPrice
+
+print(ebay_sale(99)) """
