@@ -147,7 +147,7 @@ while program != 'q':
 
 
 
-#Smaple submitted by a student 
+""" #Smaple submitted by a student 
 #create dictionary students
 students = {}
 #studentName and grade with the format students = {name: sam, grade: 90}
@@ -168,21 +168,21 @@ while selection != 'q':
     print('q - Quit the program')
     selection = input("Enter a menu option: ")
 
-    if selection == 'a':
+    if selection == 'a': #Add a new student
         name = input("Enter student name: ")
         grade = int(input("Enter student score: "))
         students[name] = grade
-    elif selection == 'r':
+    elif selection == 'r': #Remove a student
         name = input("Enter student name to be removed: ")
         del students[name]
-    elif selection == 'p':
+    elif selection == 'p': #Print the results of the list
         list_students = sorted(list(students.keys()))
         print("Student Roster")
         for i in list_students:
             print("Name: {}| Grade: {}" .format(i,students[i]))
-    elif selection == 'u':
+    elif selection == 'u': #Update the roster
         name = input("Enter student name: ")
         grade = int(input("Enter new student score: "))
         students[name] = grade
-    elif selection == 'q':
-        print("You have terminated the program.")
+    elif selection == 'q': #Quit the program
+        print("You have terminated the program.") """
