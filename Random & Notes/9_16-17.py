@@ -75,7 +75,7 @@ class ShoppingCart:
 
 
 def print_menu(theCart):
-   menuOp = ' '
+   menu = ' '
    
    print('MENU')
    print('a - Add item to cart')
@@ -85,10 +85,10 @@ def print_menu(theCart):
    print('o - Output shopping cart')
    print('q - Quit\n')
    
-   while menuOp != 'a' and menuOp != 'r' and menuOp != 'c' and menuOp != 'i' and menuOp != 'o' and menuOp != 'q':
-      menuOp = input('Choose an option:\n')
+   while menu != 'a' and menu != 'r' and menu != 'c' and menu != 'i' and menu != 'o' and menu != 'q':
+      menu = input('Choose an option:\n')
    
-   if menuOp == 'a':
+   if menu == 'a':
       print('ADD ITEM TO CART')
       name = input('Enter the item name:\n')
       description = input('Enter the item description:\n')
@@ -102,12 +102,12 @@ def print_menu(theCart):
       newItem.item_quantity = quantity
       theCart.add_item(newItem)
    
-   elif menuOp == 'r':
+   elif menu == 'r':
       print('REMOVE ITEM FROM CART')
       name = input('Enter name of item to remove:\n')
       theCart.remove_item(name)
    
-   elif menuOp == 'c':
+   elif menu == 'c':
       print('CHANGE ITEM QUANTITY')
       name = input('Enter the item name:\n')
       quantity = int(input('Enter the new quantity:\n'))
@@ -117,15 +117,15 @@ def print_menu(theCart):
       item.item_quantity = quantity
       theCart.modify_item(item)
    
-   elif menuOp == 'i':
+   elif menu == 'i':
       print('OUTPUT ITEMS\' DESCRIPTIONS')
       theCart.print_descriptions()
    
-   elif menuOp == 'o':
+   elif menu == 'o':
       print('OUTPUT SHOPPING CART')
       theCart.print_total()
    
-   return menuOp
+   return menu
 
 if __name__ == "__main__":
    menuChoice = ' '
