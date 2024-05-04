@@ -1,7 +1,7 @@
 def main():
-    path='C:/Users/szaki5/Desktop/CISP71_Files_OS_Examples/CISP71_Files_Examples/data/'
+    path='/home/howard/Documents/nvim/python/CISP71_Files_OS_Examples/CISP71_Files_Examples/data/'
     f= open(path+"myFile.txt","w+")
-    #f=open(path+"myFile.txt","a+")
+    f=open(path+"myFile.txt","a+")
     for i in range(10):
          f.write("\nThis is line %d\r\n" % (i+1))
     f.close()   
