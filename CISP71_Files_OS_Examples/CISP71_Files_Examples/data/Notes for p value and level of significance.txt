@@ -1,0 +1,60 @@
+Quoted from http://www.stat.yale.edu/Courses/1997-98/101/sigtest.htm
+Tests of Significance
+Once sample data has been gathered through an observational study or experiment, statistical inference allows analysts to assess evidence in favor or some claim about the population from which the sample has been drawn. The methods of inference used to support or reject claims based on sample data are known as tests of significance.
+Every test of significance begins with a null hypothesis H0. H0 represents a theory that has been put forward, either because it is believed to be true or because it is to be used as a basis for argument, but has not been proved. For example, in a clinical trial of a new drug, the null hypothesis might be that the new drug is no better, on average, than the current drug. We would write H0: there is no difference between the two drugs on average.
+The alternative hypothesis, Ha, is a statement of what a statistical hypothesis test is set up to establish. For example, in a clinical trial of a new drug, the alternative hypothesis might be that the new drug has a different effect, on average, compared to that of the current drug. We would write Ha: the two drugs have different effects, on average. The alternative hypothesis might also be that the new drug is better, on average, than the current drug. In this case we would write Ha: the new drug is better than the current drug, on average.
+The final conclusion once the test has been carried out is always given in terms of the null hypothesis. We either "reject H0 in favor of Ha" or "do not reject H0"; we never conclude "reject Ha", or even "accept Ha".
+If we conclude "do not reject H0", this does not necessarily mean that the null hypothesis is true, it only suggests that there is not sufficient evidence against H0 in favor of Ha; rejecting the null hypothesis then, suggests that the alternative hypothesis may be true.
+(Definitions taken from Valerie J. Easton and John H. McColl's Statistics Glossary v1.1)
+Hypotheses are always stated in terms of population parameter, such as the mean . An alternative hypothesis may be one-sided or two-sided. A one-sided hypothesis claims that a parameter is either larger or smaller than the value given by the null hypothesis. A two-sided hypothesis claims that a parameter is simply not equal to the value given by the null hypothesis -- the direction does not matter.
+Hypotheses for a one-sided test for a population mean take the following form:
+H0: = k
+Ha: > k
+or
+H0: = k
+Ha: < k.
+Hypotheses for a two-sided test for a population mean take the following form:
+H0: = k
+Ha:  k.
+A confidence interval gives an estimated range of values which is likely to include an unknown population parameter, the estimated range being calculated from a given set of sample data. (Definition taken from Valerie J. Easton and John H. McColl's Statistics Glossary v1.1)
+Example
+Suppose a test has been given to all high school students in a certain state. The mean test score for the entire state is 70, with standard deviation equal to 10. Members of the school board suspect that female students have a higher mean score on the test than male students, because the mean score  from a random sample of 64 female students is equal to 73. Does this provide strong evidence that the overall mean for female students is higher?
+The null hypothesis H0 claims that there is no difference between the mean score for female students and the mean for the entire population, so that  = 70. The alternative hypothesis claims that the mean for female students is higher than the entire student population mean, so that  > 70.
+
+Significance Tests for Unknown Mean and Known Standard Deviation
+Once null and alternative hypotheses have been formulated for a particular claim, the next step is to compute a test statistic. For claims about a population mean from a population with a normal distribution or for any sample with large sample size n (for which the sample mean will follow a normal distribution by the Central Limit Theorem), if the standard deviation  is known, the appropriate significance test is known as the z-test, where the test statistic is defined as z = .
+The test statistic follows the standard normal distribution (with mean = 0 and standard deviation = 1). The test statistic z is used to compute the P-value for the standard normal distribution, the probability that a value at least as extreme as the test statistic would be observed under the null hypothesis. Given the null hypothesis that the population mean  is equal to a given value 0, the P-values for testing H0 against each of the possible alternative hypotheses are:
+P(Z > z) for Ha: > 0
+P(Z < z) for Ha: < 0
+2P(Z>|z|) for Ha: 0.
+The probability is doubled for the two-sided test, since the two-sided alternative hypothesis considers the possibility of observing extreme values on either tail of the normal distribution.
+Example
+In the test score example above, where the sample mean equals 73 and the population standard deviation is equal to 10, the test statistic is computed as follows:
+z = (73 - 70)/(10/sqrt(64)) = 3/1.25 = 2.4. Since this is a one-sided test, the P-value is equal to the probability that of observing a value greater than 2.4 in the standard normal distribution, or P(Z > 2.4) = 1 - P(Z < 2.4) = 1 - 0.9918 = 0.0082. The P-value is less than 0.01, indicating that it is highly unlikely that these results would be observed under the null hypothesis. The school board can confidently reject H0 given this result, although they cannot conclude any additional information about the mean of the distribution.
+
+Significance Levels
+The significance level  for a given hypothesis test is a value for which a P-value less than or equal to  is considered statistically significant. Typical values for  are 0.1, 0.05, and 0.01. These values correspond to the probability of observing such an extreme value by chance. In the test score example above, the P-value is 0.0082, so the probability of observing such a value by chance is less that 0.01, and the result is significant at the 0.01 level.
+In a one-sided test,  corresponds to the critical value z* such that P(Z > z*) = . For example, if the desired significance level for a result is 0.05, the corresponding value for z must be greater than or equal to z* = 1.645 (or less than or equal to -1.645 for a one-sided alternative claiming that the mean is less than the null hypothesis). For a two-sided test, we are interested in the probability that 2P(Z > z*) = , so the critical value z* corresponds to the /2 significance level. To achieve a significance level of 0.05 for a two-sided test, the absolute value of the test statistic (|z|) must be greater than or equal to the critical value 1.96 (which corresponds to the level 0.025 for a one-sided test).
+Another interpretation of the significance level , based in decision theory, is that  corresponds to the value for which one chooses to reject or accept the null hypothesis H0. In the above example, the value 0.0082 would result in rejection of the null hypothesis at the 0.01 level. The probability that this is a mistake -- that, in fact, the null hypothesis is true given the z-statistic -- is less than 0.01. In decision theory, this is known as a Type I error. The probability of a Type I error is equal to the significance level , and the probability of rejecting the null hypothesis when it is in fact false (a correct decision) is equal to 1 - . To minimize the probability of Type I error, the significance level is generally chosen to be small.
+Example
+Of all of the individuals who develop a certain rash, suppose the mean recovery time for individuals who do not use any form of treatment is 30 days with standard deviation equal to 8. A pharmaceutical company manufacturing a certain cream wishes to determine whether the cream shortens, extends, or has no effect on the recovery time. The company chooses a random sample of 100 individuals who have used the cream, and determines that the mean recovery time for these individuals was 28.5 days. Does the cream have any effect?
+Since the pharmaceutical company is interested in any difference from the mean recovery time for all individuals, the alternative hypothesis Ha is two-sided:   30. The test statistic is calculated to be z = (28.5 - 30)/(8/sqrt(100)) = -1.5/0.8 = -1.875. The P-value for this statistic is 2P(Z > 1.875) = 2(1 - P((Z < 1.875) = 2(1- 0.9693) = 2(0.0307) = 0.0614. This is not significant at the 0.05 level, although it is significant at the 0.1 level.
+
+Decision theory is also concerned with a second error possible in significance testing, known as Type II error. Contrary to Type I error, Type II error is the error made when the null hypothesis is incorrectly accepted. The probability of correctly rejecting the null hypothesis when it is false, the complement of the Type II error, is known as the power of a test. Formally defined, the power of a test is the probability that a fixed level  significance test will reject the null hypothesis H0 when a particular alternative value of the parameter is true.
+Example
+In the test score example, for a fixed significance level of 0.10, suppose the school board wishes to be able to reject the null hypothesis (that the mean = 70) if the mean for female students is in fact 72. To determine the power of the test against this alternative, first note that the critical value for rejecting the null hypothesis is z* = 1.282. The calculated value for z will be greater than 1.282 whenever ( - 70)/(1.25) > 1.282, or  > 71.6. The probability of rejecting the null hypothesis (mean = 70) given that the alternative hypotheses (mean = 72) is true is calculated by:
+P(( > 71.6 |  = 72)
+= P(( - 72)/(1.25) > (71.6 - 72)/1.25)
+= P(Z > -0.32) = 1 - P(Z < -0.32) = 1 - 0.3745 = 0.6255. The power is about 0.60, indicating that although the test is more likely than not to reject the null hypothesis for this value, the probability of a Type II error is high.
+
+http://onlinestatbook.com/2/logic_of_hypothesis_testing/significance.html
+Quoted from https://www.youtube.com/watch?v=pwBW1aWic_Y
+
+When a result is statistically significant that means that we have evidence in from our sample that the
+effect that's in the sample exists also in the population.
+Generally we use a p-value to decide if something is statistically significant. we use the p-value to  determine if the effect that shows up in the sample indicates that there's an effect in the population or
+could it have occurred simply by chance or by sampling error.
+Generally when a p-value is less than 0.05 we say that the result is statistically significant we have evidence that the effect exists in the population.
+When we reject the null hypothesis which is that there is no effect we are saying there is an effect in that the result is statistically significant.
+
+

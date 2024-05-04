@@ -1,0 +1,3 @@
+This is the write commandIt allows us to write in a particular file 
+Python is an easy programming language
+You will have more fun in advanced Python Course

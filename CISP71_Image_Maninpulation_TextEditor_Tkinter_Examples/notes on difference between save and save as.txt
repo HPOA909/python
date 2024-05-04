@@ -1,0 +1,10 @@
+Save which is a little bit different than save as.
+Think about this sort of the logic behind it whenever you have a new file and you want to save it for the first time you have to name it. That is usually when you use save as
+If you've already saved it and for instance opened it.
+If we open like sample now if we want to save this again we've already got the name sample.txt we
+just want to save it to sample.txt.
+We have to create some sort of mechanism to let our program know if a file has already been opened. If it has does it already have a name obviously it would what is that name sort of keep track of
+it save it as that name not as a different name.
+
+We got all kinds of different things happening. We don't necessarily want a box to pop up that allows us to pick the name since we already have a name. With save you're just saving the name you already have so on the other hand if you haven't created a name yet and you click save instead of save as.
+We want to be able to sort of determine that and throw up the box that we normally would.
